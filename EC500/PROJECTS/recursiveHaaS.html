@@ -33,10 +33,12 @@
           Project logistics
         </h3>
            <ul>
-            <li> Mentor: <a href="">George Silvis</a> Send an email to gsilvis-at-bu-dot-edu if you are interested in the project.
+            <li> Mentor: <a href="https://github.com/gsilvis">George Silvis</a> Send an email to gsilvis-at-bu-dot-edu if you are interested in the project.
             <li> Min-max team size: 3-5
             <li> Expected project hours per week (per team member): 6-8
-            <li> Will the project be open source? Yes, we will hope to release this under Apache license as part of OpenStack 
+            <li> Will the project be open source? Yes, we will hope to release
+            this under Apache license as part of the <a href="https://github.com/CCI-MOC/haas">HaaS</a>, which we hope to
+            make an OpenStack component
           </ul>
         <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
           Preferred past experience
@@ -49,33 +51,53 @@
           </ul>
         <h3><a name="features" class="anchor" href="#features"><span
           class="octicon octicon-link"></span></a>
-	  What is the MOC-UI?
+          What is the HaaS?
 	  </h3>
 	  <p>
-	  <a href="https://github.com/CCI-MOC/haas">HaaS</a>
-	  is a tool for
-	  partitioning datacenters.  It allows cloud and none cloud
-	  services to be stood up alongside each other, and physical
-	  hardware to be moved back and forth between them. </p>
+            We're developing <a href="https://github.com/CCI-MOC">Hardware as
+            a Service</a> to be a new fundamental layer in cloud datacenters.
+            In a HaaS-enabled datacenter, researchers and developers can
+            independently stand up services on bare hardware, with guaranteed
+            isolation between them.  They can scale their deployments by
+            allocating and freeing hardware nodes, without having to change
+            any physical setup of the datacenter.
+          </p>
 
-	  <p>Currently, the best deployment options we
-	  have involve PXE-booting the nodes into an install image---even
-	  just the BIOS POST, the first part of this process, can take
-	  minutes.  A faster deployment method is key to users scaling
-	  their application up more rapidly.</p>
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          Why do we need Recursive HaaS?
+	  </h3>
 
 	  <p>
-	  While it is not acceptable for a general environment, users
+            After allocating new nodes, software must be deployed onto them.
+	    Currently, the best deployment options we have involve PXE-booting
+	    the nodes into an install image---even just the BIOS POST, the
+	    first part of this process, can take minutes.  A faster deployment
+	    method is key to users scaling their application up more rapidly.
+          </p>
+
+	  <p>
+	    While it is not acceptable for a general environment, users
 	  that have some level of trust with each other could use
 	  <a href="https://en.wikipedia.org/wiki/Kexec">kexec</a> to
-	  move from a linux kernel to a pre-boot environment without
+	  move from a running Linux kernel to a pre-boot environment without
 	  going through a full hardware reboot.  As long as different
-	  users of the HaaS trust each other to leave machines in a state
+	  users of the HaaS agree to leave machines in a state
 	  that is ready to kexec, then this could be used to quickly
-	  deploy to machines allocated with the HaaS.  Rather than
-	  complicating the existing HaaS layer to do this, we envision
-	  implementing this as a new HaaS layer, shared by a group of
-	  users that trust each other, on top of a base HaaS layer.
+	  deploy to machines allocated with the HaaS.
+          </p>
+
+          <p>
+            Rather than complicating the existing HaaS layer to do this, we
+	    envision implementing what we call Recursive HaaS.  Users could
+	    run HaaS as a service, on top of the datacenter's base HaaS: the
+	    derived HaaS's nodes would be allocated from base HaaS's nodes,
+	    the derived HaaS's networks would be set up by the base HaaS, and
+	    so forth.  But users of the derived HaaS would have an agreement
+	    with each other that users of the base HaaS do not have: When
+	    freeing nodes, they will be left in a state ready to be kexec'd.
+	    This allows users of the derived HaaS to scale up their
+	    deployments much more quickly.
 	  </p>
 
 	  <p>
@@ -84,9 +106,13 @@
 	  see a recursive HaaS implementation enabling. 
 	  </p>
 	  
-	  <p>Potential Goals: 
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+          Possible Goals
+        </h3>
+	  <p>
           <ul>
-	    <li> Develop a simple pass through recursive HaaS
+	    <li> Develop a simple pass-through recursive HaaS
           implementation.
 	    <li> Add kexec support, and build a pre-boot environment
           that can be provisioned against. 
@@ -94,7 +120,9 @@
 	    <li> Measure performance of the kexec method, compared to a cold boot
 	    <li> Characterize level of trust needed between users---potentially
 	    even prototype some possible attacks
-	    <li> Students could also investigate alternate fast deployment methods
+            <li> Investigate allocating additional nodes to the derived HaaS
+            on demand
+	    <li> Study alternatives to kexec
           </ul> </p>
 
         <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
