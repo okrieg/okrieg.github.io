@@ -115,7 +115,19 @@
 	    <li> Develop a simple pass-through recursive HaaS
           implementation.
 	    <li> Add kexec support, and build a pre-boot environment
-          that can be provisioned against. 
+          that can be provisioned against.  For the pre-boot environment:
+              <ul>
+                <li> Research existing pre-boot environments
+                <li> Try different policies for entering the pre-boot
+                environment (whether the user or the HaaS does this; what kind
+                of checking is done by the HaaS or a HaaS administrator)
+                <li> Find a way to communicate the new OS to the pre-boot
+                environment
+                <li> Perhaps investigate broadcast communication methods, to
+                speed up provisioning many nodes at once
+                <li> Could the pre-boot environment be skipped?  Perhaps kexec
+                directly from the old OS to the new
+              </ul>
 	    <li> Demonstrate a piece of software scaling up through kexec
 	    <li> Measure performance of the kexec method, compared to a cold boot
 	    <li> Characterize level of trust needed between users---potentially
