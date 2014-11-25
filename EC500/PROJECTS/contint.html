@@ -1,90 +1,87 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Ataturk.github.io : ">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Ataturk.github.io : ">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
 
-    <title>Continuous Integration in the cloud</title>
-  </head>
+  <title>Cloud Scale Continuous Integration</title>
+</head>
 
-  <body>
+<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+  <!-- HEADER -->
+  <div id="header_wrap" class="outer">
+    <header class="inner">
+      <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
 
-          <h1 id="project_title">Continuous Integration</h1>
-          <h2 id="project_tagline">Exploiting Docker & Vagrant to enable continous integration</h2>
-        </header>
-    </div>
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
-          Project logistics
-        </h3>
-          <ul>
+      <h1 id="project_title">Cloud Scale Continuous Integration</h1>
+      <h2 id="project_tagline">Exploiting Docker & Vagrant to enable continous integration</h2>
+    </header>
+  </div>
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+      <p>One of the issues organizations face today when implementing DevOps and Continuous Integration/Continuous Deployment, is that it is difficult to provide a consistent environment from development through to quality assurance and production environments. The goal of this project is to build an environment where a developer can in an automatic way deploy and test their code in a cloud, or even on a laptop, and then automatically deploy it into their production environment.  If successful, the result would be an open source package that would be used by thousands of developers on a daily basis working on new applications hosted in the cloud. The portable environment will make such an application deployable in any Open Hybrid Cloud</p>
+      <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+        Project logistics
+      </h3>
+      <ul>
 
-            <li> Mentor: <a href="https://www.linkedin.com/in/williamhenry">William Henry</a> Send an email to wgh-at-redhat-dot-com if you are interested in the project.
-            <li> Min-max team size: 3-5
+        <li> Mentor: <a href="https://www.linkedin.com/in/williamhenry">William Henry</a> Send an email to wgh-at-redhat-dot-com if you are interested in the project.
+          <li> Min-max team size: 3-5
             <li> Expected project hours per week (per team member): 6-8
-            <li> Will the project be open source? Yes 
-          </TBD>
-
-        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
-          Preferred past experience
-        </h3>
-          <ul>
-
-<li> Virtualization: Vagrant,  KVM, libvirt (Valuable)
-<li> Linux - bash (Very important)
-<li> Python(Very important)
-<li> Jenkins (Nice to have)
-<li> Openstack (Nice to have)
-<li> Linux Containers (LXC) Docker (If not you will learn) (Nice to have)
-<li> git, github (Rather important)
-<li> For a POC app we will need to pick a multi container app (MongoDB, node.js, ??) 
-          </ul>
-        <h3><a name="features" class="anchor" href="#features"><span
-          class="octicon octicon-link"></span></a>
-	  What is ContainerizedDevOps about?
-	  </h3>
-<p>Providing a consistent environment for development, testing, quality assurance and production.
-Providing layers of Continuous Integration testing depending on the env.
-Complete dev to prod workflow.
-Using Vagrant VM for hosting containerized applications
-
-        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
-Some Technologies Expected To Be Learned/Used
-        </h3>
-
-            <ul>
-
-<li> Docker
-<li> Vagrant
-<li> Jenkins
-<li> Python
-<li> Bash
-<li> Some DB tech (mongodb?)
-<li> Some middleware  (node.js, Fuse, Jboss?)
-
+              <li> Will the project be open source? Yes
+              </TBD>
             </ul>
+            <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
+              Preferred past experience
+            </h3>
 
-      </section>
-    </div>
+            <p>Not every team member is expected to be experienced in the skills below and some skills will be learned during the project.</p>
+            <ul>
+              <li> Virtualization: Vagrant,  KVM, libvirt (Valuable)
+                <li> Linux - bash (Very important)
+                  <li> Python(Very important)
+                    <li> Jenkins (Nice to have)
+                      <li> Openstack (Nice to have)
+                        <li> Linux Containers (LXC) Docker (If not you will learn) (Nice to have)
+                          <li> git, github (Rather important)
+                            <li> For a POC app we will need to pick a multi container app (MongoDB, node.js, ??)
+                            </ul>
+                            <h3><a name="features" class="anchor" href="#features"><span
+                              class="octicon octicon-link"></span></a>
+                              What is ContainerizedDevOps about?
+                            </h3>
+                            <p>Providing a consistent environment for development, testing, quality assurance and production.
+                              Providing layers of Continuous Integration testing depending on the env.
+                              Complete dev to prod workflow.
+                              Using Vagrant VM for hosting containerized applications
 
-  </body>
-</html>
+                              <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+                                Some Technologies Expected To Be Learned/Used
+                              </h3>
+
+                              <ul>
+
+                                <li> Docker
+                                  <li> Vagrant
+                                    <li> Jenkins
+                                      <li> Python
+                                        <li> Bash
+                                          <li> Some DB tech (mongodb? TBD)
+                                            <li> Some middleware  (node.js, Fuse, Jboss? TBD)
+
+                                            </ul>
+
+                                          </section>
+                                        </div>
+
+                                      </body>
+                                      </html>
 
 
-
-
-
-
-
-
+                                      
