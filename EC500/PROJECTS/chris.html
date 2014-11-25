@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ataturk.github.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title>Cloud Computing Course </title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+
+          <h1 id="project_title">Radiology on the cloud</h1>
+          <h2 id="project_tagline">Connecting ChRIS to the MOC</h2>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+          Project logistics
+        </h3>
+          <ul>
+            <li> Mentor: <a href="http://www.nmr.mgh.harvard.edu/~rudolph/">Rudolph Pienaar.</a> Send an email to rudolph.pienaar-at-childrens.harvard.edu if you are interested in the project.
+            <li> Min-max team size: 3-5
+            <li> Expected project hours per week (per team member): 6-8
+            <li> Will the project be open source? Yes, LICENSE ul
+          </TBD>
+
+        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
+          Preferred past experience
+        </h3>
+	  
+          <p>Some experience in one or more of the following is preferred in possible team members:</p>
+          <ul>
+
+<li> Python (Very important)
+<li> PHP (Rather important)
+<li> Javascript (Good)
+<li> (WebGL for visualization using the xtk library (
+<a href="http://www.goxtk.com">http://www.goxtk.com</a>)
+ -- also developed at the FNNDC.) -- nice, but not necessary
+<li> C/C++ (Less important)
+<li> Linux (Very important, at least in as much as understanding parent/child processing from a shell perspective, capturing stdout/stderr form processes, ssh/scp)
+          </ul>
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+	  Overview
+	  </h3>
+<p>This is a real-world project geared at processing actual clinical medical image data on an expanding library of cloud/HPC resources. ChRIS (https://github.com/FNNDSC/chrisreloaded) is an existing research project at the Fetal Neonatal and Development Science Center at Boston Children's Hospital that collects medical image data from hospital resources and transparently dispatches processing to remote sites. Results are presented in a Web 2.0 "twitter" inspired feed, and users can also share feeds and interactively visualize data using WebGL.
+
+<p>What specifically will be addressed:
+
+<p>For more conventional HPC resources, ChRIS strips all identifying data from image files, zips data up, scp's to remote cluster headnode, unpacks, schedules required processing jobs, monitors, and on completion, zips up all results, scp's back to ChRIS, and then cleans up back on the headnode.
+
+<p>We'd like to do the same on an Open Cloud platform, which means all the above but with the additional steps of transparently setting up/shutting down the cloud resources: hardware, images, remote scheduler, etc. Ideally speaking, the remote cloud resources would be a transparent extension of an existing HPC out at Children's.
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+          Some Technologies Expected To Be Learned/Used
+        </h3>
+
+            <ul>
+
+<li> Web and GUI development
+<li> Remote job management on UNIX (and UNIX like) operating systems
+<li> Instantiating schedulers
+<li> Use of OpenStack API
+            </ul>
+
+      </section>
+    </div>
+
+  </body>
+</html>
