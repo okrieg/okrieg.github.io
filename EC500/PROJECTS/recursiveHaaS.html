@@ -19,9 +19,9 @@
         <header class="inner">
           <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
 
-          <h1 id="project_title">Recursive HaaS</h1>
+          <h1 id="project_title">HaaS Fast Deployment</h1>
           <h2 id="project_tagline">Adding features like fast
-          provisioning by HaaS on top of HaaS</h2>
+          provisioning using HaaS on top of HaaS</h2>
 
         </header>
     </div>
@@ -33,8 +33,13 @@
           Project logistics
         </h3>
            <ul>
-            <li> Mentor: <a href="https://github.com/gsilvis">George Silvis</a> Send an email to gsilvis-at-bu-dot-edu if you are interested in the project.
-            <li> Min-max team size: 3-5
+            <li> Mentors:
+	    <ul>
+		    <li><a href="https://github.com/henn">Jason Hennessey</a>: Send an email to henn-at-bu-dot-edu if you are interested in the project.
+		    <li><a href="https://github.com/gsilvis">George Silvis</a> gsilvis-at-bu-dot-edu
+		    <li><a href="https://github.com/zenhack">Ian Denhardt</a> isd-at-bu-dot-edu
+	    </ul>
+            <li> Min-max team size: 4-7
             <li> Expected project hours per week (per team member): 6-8
             <li> Will the project be open source? Yes, we will hope to release
             this under Apache license as part of the <a href="https://github.com/CCI-MOC/haas">HaaS</a>, which we hope to
@@ -54,7 +59,7 @@
           What is the HaaS?
 	  </h3>
 	  <p>
-            We're developing <a href="https://github.com/CCI-MOC">Hardware as
+            We're developing <a href="https://github.com/CCI-MOC/haas">Hardware as
             a Service</a> to be a new fundamental layer in cloud datacenters.
             In a HaaS-enabled datacenter, researchers and developers can
             independently stand up services on bare hardware, with guaranteed
@@ -72,32 +77,47 @@
             After allocating new nodes, software must be deployed onto them.
 	    Currently, the best deployment options we have involve PXE-booting
 	    the nodes into an install image---even just the BIOS POST, the
-	    first part of this process, can take minutes.  A faster deployment
+	    first part of this process, can take 5 or 10 minutes.  A faster deployment
 	    method is key to users scaling their application up more rapidly.
           </p>
 
-	  <p>
-	    While it is not acceptable for a general environment, users
-	  that have some level of trust with each other could use
-	  <a href="https://en.wikipedia.org/wiki/Kexec">kexec</a> to
-	  move from a running Linux kernel to a pre-boot environment without
-	  going through a full hardware reboot.  As long as different
-	  users of the HaaS agree to leave machines in a state
-	  that is ready to kexec, then this could be used to quickly
-	  deploy to machines allocated with the HaaS.
-          </p>
+	  <p> While it is not acceptable for a general environment, users that
+	  have some level of trust with each other could use <a
+	  href="https://en.wikipedia.org/wiki/Kexec">kexec</a> to move from a
+  running Linux kernel to a pre-boot environment without going through a full
+  hardware reboot.  As long as different users of the HaaS agree to leave
+  machines in a state that is ready to kexec, then this could be used to
+  quickly deploy to machines allocated with the HaaS. This could allow
+  massively parallel jobs to run for 10 or 20 seconds across thousands of nodes
+  to quickly accomplish tasks like high resolution rendering or other realtime
+  tasks. </p>
 
-          <p>
-            Rather than complicating the existing HaaS layer to do this, we
-	    envision implementing what we call Recursive HaaS.  Users could
-	    run HaaS as a service, on top of the datacenter's base HaaS: the
-	    derived HaaS's nodes would be allocated from base HaaS's nodes,
+	  <p>
+	  Since HaaS is a small, trusted layer in the data center that is used
+	  for both production and research purposes, HaaS needs to be remain
+		  stable. Thus, new features need to be well tested before they
+			  can be rolled out, simliar to the philosophy of <a
+				  href="https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux">Redhat
+			  Enterprise Linux (RHEL)</a>. Rather than immediately
+		  merging freshly developed functionality like fast
+		  provisioning into the stable data center HaaS layer, it would
+		  make more sense to have another HaaS into which these changes
+		  could be made, similar to how <a
+		  href="https://getfedora.org/">Fedora</a> is the more up to
+	  date version of RHEL. It's with this in mind that the other major
+	  part of this project, <b>Recursive HaaS</b> comes into play.
+	  </p>
+
+	    <p>	
+	    Users or groups of users could run their own HaaS on top of the datacenter's base HaaS:
+	    the derived HaaS's nodes would be allocated from base HaaS's nodes,
 	    the derived HaaS's networks would be set up by the base HaaS, and
 	    so forth.  But users of the derived HaaS would have an agreement
 	    with each other that users of the base HaaS do not have: When
 	    freeing nodes, they will be left in a state ready to be kexec'd.
-	    This allows users of the derived HaaS to scale up their
-	    deployments much more quickly.
+	    This allows users of the derived HaaS to scale up their deployments
+	    much more quickly.
+
 	  </p>
 
 	  <p>
