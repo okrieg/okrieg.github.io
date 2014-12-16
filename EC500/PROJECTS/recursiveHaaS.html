@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ataturk.github.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title> BU Cloud Computing Course </title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+
+          <h1 id="project_title">Recursive HaaS</h1>
+          <h2 id="project_tagline">Adding features like fast
+          provisioning by HaaS on top of HaaS</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+     <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+          Project logistics
+        </h3>
+           <ul>
+            <li> Mentor: <a href="https://github.com/gsilvis">George Silvis</a> Send an email to gsilvis-at-bu-dot-edu if you are interested in the project.
+            <li> Min-max team size: 3-5
+            <li> Expected project hours per week (per team member): 6-8
+            <li> Will the project be open source? Yes, we will hope to release
+            this under Apache license as part of the <a href="https://github.com/CCI-MOC/haas">HaaS</a>, which we hope to
+            make an OpenStack component
+          </ul>
+        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
+          Preferred past experience
+        </h3>
+          <p>Some experience in one or more of the following is preferred in possible team members:</p>
+          <ul>
+            <li> Python
+	    <li> Operating Systems (e.g. CS 552 is recommended)
+	    <li> Linux system (e.g. CS 410, having a personal machine running Linux)
+          </ul>
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          What is the HaaS?
+	  </h3>
+	  <p>
+            We're developing <a href="https://github.com/CCI-MOC">Hardware as
+            a Service</a> to be a new fundamental layer in cloud datacenters.
+            In a HaaS-enabled datacenter, researchers and developers can
+            independently stand up services on bare hardware, with guaranteed
+            isolation between them.  They can scale their deployments by
+            allocating and freeing hardware nodes, without having to change
+            any physical setup of the datacenter.
+          </p>
+
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          Why do we need Recursive HaaS?
+	  </h3>
+
+	  <p>
+            After allocating new nodes, software must be deployed onto them.
+	    Currently, the best deployment options we have involve PXE-booting
+	    the nodes into an install image---even just the BIOS POST, the
+	    first part of this process, can take minutes.  A faster deployment
+	    method is key to users scaling their application up more rapidly.
+          </p>
+
+	  <p>
+	    While it is not acceptable for a general environment, users
+	  that have some level of trust with each other could use
+	  <a href="https://en.wikipedia.org/wiki/Kexec">kexec</a> to
+	  move from a running Linux kernel to a pre-boot environment without
+	  going through a full hardware reboot.  As long as different
+	  users of the HaaS agree to leave machines in a state
+	  that is ready to kexec, then this could be used to quickly
+	  deploy to machines allocated with the HaaS.
+          </p>
+
+          <p>
+            Rather than complicating the existing HaaS layer to do this, we
+	    envision implementing what we call Recursive HaaS.  Users could
+	    run HaaS as a service, on top of the datacenter's base HaaS: the
+	    derived HaaS's nodes would be allocated from base HaaS's nodes,
+	    the derived HaaS's networks would be set up by the base HaaS, and
+	    so forth.  But users of the derived HaaS would have an agreement
+	    with each other that users of the base HaaS do not have: When
+	    freeing nodes, they will be left in a state ready to be kexec'd.
+	    This allows users of the derived HaaS to scale up their
+	    deployments much more quickly.
+	  </p>
+
+	  <p>
+	  Fast provisioning is just an example of recursive HaaS.
+	  There are a number of interesting research projects that we
+	  see a recursive HaaS implementation enabling. 
+	  </p>
+	  
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+          Possible Goals
+        </h3>
+	  <p>
+          <ul>
+	    <li> Develop a simple pass-through recursive HaaS
+          implementation.
+	    <li> Add kexec support, and build a pre-boot environment
+          that can be provisioned against.  For the pre-boot environment:
+              <ul>
+                <li> Research existing pre-boot environments
+                <li> Try different policies for entering the pre-boot
+                environment (whether the user or the HaaS does this; what kind
+                of checking is done by the HaaS or a HaaS administrator)
+                <li> Find a way to communicate the new OS to the pre-boot
+                environment
+                <li> Perhaps investigate broadcast communication methods, to
+                speed up provisioning many nodes at once
+                <li> Could the pre-boot environment be skipped?  Perhaps kexec
+                directly from the old OS to the new
+              </ul>
+	    <li> Demonstrate a piece of software scaling up through kexec
+	    <li> Measure performance of the kexec method, compared to a cold boot
+	    <li> Characterize level of trust needed between users---potentially
+	    even prototype some possible attacks
+            <li> Investigate allocating additional nodes to the derived HaaS
+            on demand
+	    <li> Study alternatives to kexec
+          </ul> </p>
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+          Some Technologies Expected To Be Learned/Used
+        </h3>
+            <ul>
+            <li> kexec  
+            <li> Hardware as a Service 
+            <li> REST, Python...
+            </ul>
+ 
+      </section>
+    </div>
+
+  </body>
+</html>
