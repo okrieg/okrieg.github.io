@@ -59,13 +59,15 @@
           What is the HaaS?
 	  </h3>
 	  <p>
-            We're developing <a href="https://github.com/CCI-MOC/haas">Hardware as
-            a Service</a> to be a new fundamental layer in cloud datacenters.
-            In a HaaS-enabled datacenter, researchers and developers can
-            independently stand up services on bare hardware, with guaranteed
-            isolation between them.  They can scale their deployments by
-            allocating and freeing hardware nodes, without having to change
-            any physical setup of the datacenter.
+	    We're developing <a href="https://github.com/CCI-MOC/haas">Hardware
+		    as a Service</a> to be a new fundamental layer in cloud
+	    datacenters.  In a HaaS-enabled datacenter, researchers and
+	    developers can independently stand up services on bare hardware,
+	    with guaranteed isolation between them.  They can scale their
+	    deployments by allocating and freeing hardware nodes, without
+	    having to change any physical setup of the datacenter. HaaS allows
+	    bare metal machines to be used similarly to virtual machines in the
+	    cloud.
           </p>
 
         <h3><a name="features" class="anchor" href="#features"><span
@@ -76,7 +78,7 @@
 	  <p>
             After allocating new nodes, software must be deployed onto them.
 	    Currently, the best deployment options we have involve PXE-booting
-	    the nodes into an install image---even just the BIOS POST, the
+	    the nodes into an install image, which can take a while. Just the BIOS POST, the
 	    first part of this process, can take 5 or 10 minutes.  A faster deployment
 	    method is key to users scaling their application up more rapidly.
           </p>
