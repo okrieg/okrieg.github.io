@@ -18,7 +18,7 @@
         <header class="inner">
           <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
 
-          <h1 id="project_title">Prototype of “Multi-Thing” IoT Applications Running over OpenDaylight</h1>
+          <h1 id="project_title">“Multi-Thing” IoT Applications over OpenDaylight</h1>
 	  <!-- <h2 id="project_tagline">XXXXXXX</h2> -->
         </header>
     </div>
@@ -32,17 +32,16 @@
 
 		  <li> Mentors:
 		  <ul>
-			  <li>Jim Ballingall, IAP Executive Director. Send an
-		  email to jim at industry-academia dot org if you are
-		  interested in the project.  <a
+			  <li>Jim Ballingall, IAP Executive Director.
+		  email: jim at industry-academia dot org<a
 		  href="https://www.linkedin.com/pub/jim-ballingall/1/a66/a71">[LinkedIn]</a></a></a></a>
 
-			  <li> Mentor: Lionel Florit, Cisco Principal Engineer <a
+			  <li> Lionel Florit, Cisco Principal Engineer <a
 				  href="https://www.linkedin.com/pub/lionel-florit/11/577/425">[LinkedIn]</a>
 
 		  </ul>
 
-	    <li> Min-max team size: 4
+	    <li> Min-max team size: 3-5
             <li> Expected project hours per week (per team member): 10
             <li> Will the project be open source? Yes
     </ul>
@@ -50,18 +49,14 @@
         <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
           Preferred past experience
         </h3>
-          <ul>
-		<li> Programming
-	competency in Java, Python, Database, WEB App Frameworks, Arduino,
-	sensors, ODL Architecture and Infra, mobile app (pick your favorite
-	OS &amp; language), Javascript, REST APIs, YANG, M2M Arch/Protocols
-	(some of these can learned quickly on the project)</li>
-		<li> <a href="http://www.openstack.org/">OpenStack</a>
-	, OpenDaylight, Cloud Computing, Distributed Systems (not required,
-	all nice to have).</li>
-		<li>  Familiarity
-	with concepts and protocols of computer networks (Ethernet, IP,
-	transport protocols) 
+  <ul>
+	  <li> Competency in Java, Python, Databases, WEB App Frameworks,
+    <li>Arduino, sensors, ODL Architecture and Infra, mobile app development,
+  <li>Javascript, REST APIs, YANG, M2M Arch/Protocols
+	</li>
+		<li> <a href="http://www.openstack.org/">OpenStack</a>, OpenDaylight</li>
+		<li>  Concepts and protocols of computer networks (Ethernet, IP,
+	transport protocols)
 		<li> Linux
           </ul>
         <h3><a name="features" class="anchor" href="#features"><span
@@ -77,7 +72,9 @@ The ODL and OpenStack Neutron teams have collaborated to integrate
 the two projects such that ODL can provide virtual tenant networking
 for OpenStack tenants, as a plug-in for OpenStack Neutron. But, ODL
 applies beyond SDN, notably, to the new and vast world of the
-“Internet of Things” (IoT). There is a dearth of IoT [2, 3]
+“Internet of Things” (IoT).</p>
+
+<p> There is a dearth of IoT [2, 3]
 applications supporting large-scale “multi-thing”
 IoT networks (Multi-Thing is loosely defined as a network composed of IoT components of different sizes, shape and scale). The requirement for this project is to design and
 prototype two or more IoT applications running over the ODL IoT data
@@ -89,7 +86,7 @@ Imagine you can embed any sort of sensor, camera, data acquisition
 devices, whatever throughout a city. How would you help the
 population of this city to have a better life? Do a little research
 and you will find many ways to extract data from your environment and
-reuse it in a beneficial way. 
+reuse it in a beneficial way.
 </p>
 <p>ODL is being used as
 an IoT data collection platform [5]. The IoT data is organized in a
@@ -105,7 +102,7 @@ data and send it to our IoT collection facility. Once there, the data
 must be extracted using oneM2M (an IoT standard) APIs and processed
 using the reasoning tool of your choice. The result must be presented
 on a smart phone.</p>
-<img src="images/odl-iot-diagram.png">
+<img src="images/odl-iot-diagram.png" width="600px">
         <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
 		Deliverables
         </h3>
@@ -114,9 +111,9 @@ on a smart phone.</p>
 		<li> Smart devices
 	(you may use raspberry Pie, Arduinos, etc.)  which are capable of
 	collecting data and send it to our ODL data store using oneM2M APIs
-		<li>A reasoner: 
-	a software module in Java running within or on top of ODL capable of
-	extracting IoT data from the ODL data store (or a back-end database)
+		<li>A reasoner:
+	a software module in Java running within or on top of ODL, capable of
+	extracting IoT data from the ODL data store (or a back-end database),
 	and process it to produce the solution of the problem. You may use
 	an off the shelve SW or write your own logic for the problem you’re
 	trying to solve. Even better, reuse what has already been developed
@@ -135,7 +132,7 @@ on a smart phone.</p>
 
 	<h3>References</h3>
 		<ol>
-			<li> OpenDaylight: http://www.opendaylight.org 
+			<li> OpenDaylight: http://www.opendaylight.org
 
 			<li>Internet of Things Data Management (IOTDM):
 				<a href="https://wiki.opendaylight.org/view/Project_Proposals:Internet_of_Things_Data_Management_(IOTDM">https://wiki.opendaylight.org/view/Project_Proposals:Internet_of_Things_Data_Management_(IOTDM</a>)
@@ -151,7 +148,7 @@ on a smart phone.</p>
 				<ul>
 					<li>oneM2M
 						Functional Architecture: TS0001
-					<li>oneM2M Webinar: Taking a look inside oneM2M 
+					<li>oneM2M Webinar: Taking a look inside oneM2M
 				</ul>
 		</ol>
 
