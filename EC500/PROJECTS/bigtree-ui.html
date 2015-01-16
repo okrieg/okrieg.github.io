@@ -31,15 +31,14 @@
   <ul>
 	  <li> Mentors:
 	  <ul>
-		  <li>Jim Ballingall, IAP Executive Director. Send an
-	  email to jim at industry-academia dot org if you are
-	  interested in the project.  <a
+		  <li>Jim Ballingall, IAP Executive Director.
+	  email: jim at industry-academia dot org<a
 	  href="https://www.linkedin.com/pub/jim-ballingall/1/a66/a71">[LinkedIn]</a></a></a></a>
 
-		  <li> Mentor: Lionel Florit, Cisco Principal Engineer <a
+		  <li> Lionel Florit, Cisco Principal Engineer <a
 			  href="https://www.linkedin.com/pub/lionel-florit/11/577/425">[LinkedIn]</a>
-
-	    <li> Min-max team size: 4
+      </ul>
+	    <li> Min-max team size: 3-5
             <li> Expected project hours per week (per team member): 10
             <li> Will the project be open source? Yes
 	  </ul>
@@ -50,23 +49,28 @@
   Preferred past experience
 </h3>
   <ul>
-	<li> Programming
-competency in Java, Python, Javascript, MVC/MVVM UI Frameworks (e.g. Anjular), Database(e.g Mongodb), Message BUS (e.g. AMQP), WEB App Frameworks (e.g. Vertx), Graph Tools (e.g. Sigma), ODL DLUX UI framework, ODL Architecture</li>
+	<li> Competency in Java, Python, Javascript,
+  <li> MVC/MVVM UI Frameworks (e.g. Anjular),
+  <li> NoSQL Databases (e.g MongoDB),
+  <li> Message BUS (e.g. AMQP), WEB App Frameworks (e.g. Vertx),
+  <li> Graph Tools (e.g. Sigma), ODL DLUX UI framework, ODL Architecture</li>
   </ul>
         <h3> Problem </h3>
-Internet of Things defines a network composed of multiple elements of different sizes, shape and functions. (2)(3). Currently there lacks a means to represent large IoT data resource trees in a visually and/or application-consumable manner. The requirement for this project is to design, develop and prototype a User and application interface that enables.
+Internet of Things defines a network composed of multiple elements of different sizes, shape and functions [2, 3]. Currently there lacks a means to represent large IoT data resource trees in a visually and/or application-consumable manner. The requirement for this project is to design, develop and prototype a user and application interface that enables.
 
         <h3>Description </h3>
 
-	OpenDaylight (ODL) is being used as an Internet of Things (IoT) data collection platform(4)(1) . The IoT data  is organized in a massive resource tree ( potentially millions of nodes). This tree  contains measurements from devices ( the things) and its  associated attributes.  The attributes represent metadata about  the resource,  for example access rights,  creation time,  children list,  owner,  size,  quota etc.
+	OpenDaylight (ODL) is being used as an Internet of Things (IoT) data collection platform [4, 1]. The IoT data  is organized in a massive resource tree (potentially millions of nodes). This tree  contains measurements from devices (the things) and its  associated attributes.  The attributes represent metadata about  the resource,  for example access rights,  creation time,  children list,  owner,  size,  quota etc.
 
 	We need a tool to access and visualize this resource tree, and maybe even modify the tree  structure (e.g. edit object). This would be used by any IoT  application and/or operatot with authorization to access the data. The tool needs to allow the user to express what needs  to be displayed and  transfer as little information as possible from the data store to display it. This will involve some form of data aggregation and filtering, likely performed as either an ODL plug-in or a function-specific application back-end.
-	<img src="images/iot-ui.png" alt="An IoT resource with thousands of children">
+
+	<img src="images/iot-ui.png" width="620px"alt="An IoT resource with thousands of children">
+  
 	This is a representation of a portion of the resource tree (DDM: Distributed Data Management). We see that  when the data set grows to  thousands of children or levels, it is  very difficult to visualize and use this data.
 
 
 	<h3> Deliverables </h3>
-	<ul> 
+	<ul>
 		<li> Visualization tool running in a web browser allowing  the representation of sub-sections of a tree with 1M+ nodes. Only what can be visualized should be transferred. Response time is important.
 		<li> Define strategies to minimize the data transfer
 		<li> Rendering and tree  graphical representation should happen on the server side (ODL),  allowing very little to no  requirement ( beyond a web browser) on the client side
