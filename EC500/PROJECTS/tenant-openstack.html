@@ -53,7 +53,27 @@
           </ul>
         <h3><a name="features" class="anchor" href="#features"><span
           class="octicon octicon-link"></span></a>
-          Project Description
+          The Massachusetts Open Cloud
+	</h3>
+
+	  <p>
+            Currently, cloud providers, such as Amazon and Rackspace, offer
+            all of their cloud services themselves: compute (VMs), virtual
+            disks, data storage, networking, and so on.  Users are therefore
+            locked in to one solution---they cannot combine data storage from
+            Rackspace with compute from Amazon.
+          </p>
+
+	  <p>
+            The Massachusetts Open Cloud (MOC) is trying to create an
+            environment where multiple cloud service providers offer different
+            services, and users can combine different provider's services at
+            their choice.
+          </p>
+
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          Openstack Resellers
 	</h3>
 
 	  <p>
@@ -65,7 +85,7 @@
           </p>
 
           <p>
-            For more complex systems, organizations may want to act as
+            For more complex systems, such as in the MOC, organizations may want to act as
             resellers: buying a resource, somehow repackaging it conveniently,
             and then selling it again.  In an Openstack environment, this can
             be accomplished by running an Openstack service which itself gets
@@ -80,15 +100,36 @@
             the object there.
           </p>
 
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          Extensions
+	</h3>
+
           <p>
-            Some use-cases are as follows.  One-to-one mapping: pass through
-            directly to underlying services.  Many-to-one mapping: pass
-            through to one of several different underlying services.
+            At first, the pass-through implementations will be hard-coded for
+            simplicity to use one particular underlying service.  The next
+            step is to use the MOC Service Directory to discover the relevant
+            services, and allow the user to select some (possibly restricted)
+            combination of them.
           </p>
 
           <p>
-          For this to be convenient, there should be a way to deploy these
-          pass-through services in an automated fashion, possibly using Heat.
+            Another related project is the MOC client library.  It is designed
+            to be a general API for cloud applications intended to run in the
+            MOC.  It would abstract over different backends, by letting the
+            user choose which services to use, but then have the user interact
+            with those different options in one uniform way.  This project is
+            related, in that it achieves some of the same goals, but without
+            forcing users to modify their cloud services.  So, another goal is
+            to make a version of the Openstack pass-through services that is
+            based on the MOC client library.
+          </p>
+
+          <p>
+            Finally, for using these pass-through services to be convenient,
+            there should be a way to deploy these pass-through services in an
+            automated fashion, possibly using Heat.  (The MOC client library
+            has this goal as well, and some work could be shared there.)
           </p>
           
         <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
@@ -107,6 +148,12 @@
                 metadata for which underlying service to go to?  Do Openstack
                 APIs need to be modified?
               </ul>
+            <li> Multiple backends
+              <ul>
+                <li> Discovering backends in the MOC service directory
+                <li> Establishing a way to select particular backends
+              </ul>
+            <li> Integration with MOC client library
             <li> Automated deployment of pass-through services
           </ul> </p>
 
