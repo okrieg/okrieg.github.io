@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ataturk.github.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title> BU Cloud Computing Course </title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+
+          <h1 id="project_title">Per-Tenant Openstack Services</h1>
+          <h2 id="project_tagline">Put your tagline here!</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+     <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+          Project logistics
+        </h3>
+           <ul>
+            <li> Mentors:
+	    <ul>
+		    <li><a href="https://github.com/gsilvis">George Silvis</a> gsilvis-at-bu-dot-edu
+                    <li>Amrith Kumar amrith-at-tesora-dot-com
+	    </ul>
+            <li> Min-max team size: 4-7
+            <li> Expected project hours per week (per team member): 6-8
+            <li> Will the project be open source? Yes, under the Apache
+            license, possibly with the goal of being integrated into
+            OpenStack.
+          </ul>
+        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
+          Preferred past experience
+        </h3>
+          <p>Some experience in one or more of the following is preferred in possible team members:</p>
+          <ul>
+            <li> Python
+            <li> Openstack
+          </ul>
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          The Massachusetts Open Cloud
+	</h3>
+
+	  <p>
+            Currently, cloud providers, such as Amazon and Rackspace, offer
+            all of their cloud services themselves: compute (VMs), virtual
+            disks, data storage, networking, and so on.  Users are therefore
+            locked in to one solution---they cannot combine data storage from
+            Rackspace with compute from Amazon.
+          </p>
+
+	  <p>
+            The Massachusetts Open Cloud (MOC) is trying to create an
+            environment where multiple cloud service providers offer different
+            services, and users can combine different provider's services at
+            their choice.
+          </p>
+
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          Openstack Resellers
+	</h3>
+
+	  <p>
+            Openstack services, such as Nova, Cinder, and Swift, are run by a
+            resource provider (the group running and maintaining the Openstack
+            installation), and used by a resource consumer (tenants in the
+            Openstack installation).  There is only two different economic
+            roles in this system: the buyer and the seller.
+          </p>
+
+          <p>
+            For more complex systems, such as in the MOC, organizations may want to act as
+            resellers: buying a resource, somehow repackaging it conveniently,
+            and then selling it again.  In an Openstack environment, this can
+            be accomplished by running an Openstack service which itself gets
+            its resources from other Openstack services.
+          </p>
+
+          <p>
+            In this project we will demonstrate one particular version of
+            this: per-tenant pass-through openstack services.  When you create
+            or allocate an object in one of these services, it will pass the
+            request to an underlying service, thereby creating or allocating
+            the object there.
+          </p>
+
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+          Extensions
+	</h3>
+
+          <p>
+            At first, the pass-through implementations will be hard-coded for
+            simplicity to use one particular underlying service.  The next
+            step is to use the MOC Service Directory to discover the relevant
+            services, and allow the user to select some (possibly restricted)
+            combination of them.
+          </p>
+
+          <p>
+            Another related project is the MOC client library.  It is designed
+            to be a general API for cloud applications intended to run in the
+            MOC.  It would abstract over different backends, by letting the
+            user choose which services to use, but then have the user interact
+            with those different options in one uniform way.  This project is
+            related, in that it achieves some of the same goals, but without
+            forcing users to modify their cloud services.  So, another goal is
+            to make a version of the Openstack pass-through services that is
+            based on the MOC client library.
+          </p>
+
+          <p>
+            Finally, for using these pass-through services to be convenient,
+            there should be a way to deploy these pass-through services in an
+            automated fashion, possibly using Heat.  (The MOC client library
+            has this goal as well, and some work could be shared there.)
+          </p>
+          
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+          Possible Goals
+        </h3>
+	  <p>
+          <ul>
+	    <li> Write a pass-through implementation for some of the Openstack
+	      services (most likely Nova)
+              <ul>
+                <li> Decide how to manage authorization and
+                authentication---use the underlying layer's identity services,
+                  or build new ones
+                <li> One-to-one or many-to-one?
+                <li> In the many-to-one situation, does there need to be
+                metadata for which underlying service to go to?  Do Openstack
+                APIs need to be modified?
+              </ul>
+            <li> Multiple backends
+              <ul>
+                <li> Discovering backends in the MOC service directory
+                <li> Establishing a way to select particular backends
+              </ul>
+            <li> Integration with MOC client library
+            <li> Automated deployment of pass-through services
+          </ul> </p>
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+          Some Technologies Expected To Be Learned/Used
+        </h3>
+        <ul>
+          <li> Python
+          <li> Openstack APIs
+          <li> Automated deployment of infrastucture in Openstack
+        </ul>
+ 
+      </section>
+    </div>
+
+  </body>
+</html>
