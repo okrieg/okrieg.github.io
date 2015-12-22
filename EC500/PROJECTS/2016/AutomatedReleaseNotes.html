@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ataturk.github.io : ">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title>Automated Release Notes</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+            <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+            <h1 id="project_title">Automated Release Notes</h1>
+            <h3 id="project_tagline">Including work items in the Continuous Integration Pipeline</h3>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+            <div>
+                <h3>
+                      <a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+                      Project logistics
+                  </h3>
+                <ul>
+                    <li>
+                        Mentors:
+                        <ul>
+                            <li><strong>Sam Howes</strong> Email: samuel.howes@mingleanalytics.com</li>
+                            <li><strong>Luke Hanscom</strong> Email: luke.hanscom@mingleanalytics.com</li>
+                        </ul>
+                        <li>Min-max team size: 3-5</li>
+                        <li>Expected project hours per week (per team member): 6-8</li>
+                        <li>Open source</li>
+                </ul>
+                <h4>
+                          <a name="preferred" class="anchor" href="#preferred">
+                              <span class="octicon octicon-link"></span>
+                          </a>
+                          Preferred past experience
+                      </h4>
+                <ul>
+                    <li>Java</li>
+                    <li>Build Automation (Nice to have)</li>
+                </ul>
+            </div>
+            <div>
+
+                <h3>
+                          <a name="features" class="anchor" href="#features">
+                              <span class="octicon octicon-link"></span>
+                          </a>
+                          Project Overview
+                      </h3>
+
+
+                <p>
+                    Releasing software with a Continuous Integration (CI) Pipeline can greatly increase the speed with which code gets released.
+                    CI Pipelines can largely replace manual processes of releasing. When it comes to the content of a release
+                    however, most tools focus on relating each build to a set of changes in source control. This is great
+                    for developers to determine the source of a bug in a particular build, but the source control does not
+                    hold much value when it comes to communicating the business content of the build.
+                </p>
+                <p>
+                    When a build gets deployed, the business wants to know what the content of the build is, so that they know what to test,
+                    as well as what can be released to production. This often means a manual step in the CI process is necessary:
+                    the developer must look up the work items in the work item tracking software, and enter them manually
+                    into the release tracking software. The goal of this project is to eliminate that manual step of entering
+                    release notes by integrating the build pipeline with Work Item Tracking software.
+                </p>
+            </div>
+            <div>
+                <h3>
+                              <a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+                              Some Technologies you will learn/use:
+                          </h3>
+                <ul>
+                    <li><a href="https://www.jetbrains.com/teamcity/" target="_blank">TeamCity</a> build server </li>
+                    <li>Java to write a <a href="https://confluence.jetbrains.com/display/TCD9/Developing+TeamCity+Plugins" target="_blank">TeamCity Plugin</a></li>
+                    <li><a href="https://octopus.com/" target="_blank">Octopus Deploy</a> release server</li>
+                    <li>
+                        C# and .NET
+                        <ul>
+                            <li>Octopus Deploy is targeted at .NET applications</li>
+                            <li>The overall approach should be configurable for multiple deployment servers, but our current
+                                need is for Octopus Deploy.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.visualstudio.com/products/visual-studio-team-services-vs" target="_blank">Visual Studio Team Services/Visual Studio Online (VSO)</a>                        work item tracking.
+                        <ul>
+                            <li>Ideally the end-product will be configurable for multiple tracking servers, but the current need
+                                is for VSO.</li>
+                            <li><a href="https://www.visualstudio.com/integrate/explore/explore-vso-vsi" target="_blank">Extensions homepage</a></li>
+                            <li>*Note: Visual Studio Online has been re-branded as Visual Studio Team Services recently. It is
+                                a work item tracking system similar to JIRA, it is not to be conused with the Visual Studio
+                                IDE used for writing code.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
