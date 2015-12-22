@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times}
+    p.p2 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    li.li7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    span.s1 {font: 12.0px Times}
+    span.s2 {text-decoration: underline ; color: #042eee}
+    span.s3 {font: 12.0px Times; color: #042eee}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Project K8PetStore: Deploying a data driven app on Kubernetes with autoscaling</b></p>
+<p class="p2"><b>Project logistics</b></p>
+<ul class="ul1">
+  <li class="li3"><span class="s1"></span>Mentor: <a href="http://jayunit100.blogspot.com/"><span class="s2">Jay Vyas</span></a><span class="Apple-converted-space"> </span></li>
+  <li class="li3">Mentor trello id: jayunit100</li>
+  <li class="li3">Min-max team size: 3-5</li>
+  <li class="li3">Expected project hours per week (per team member): 8-10</li>
+  <li class="li3">Will the project be open source? Yes.</li>
+  <li class="li3">Mentor available times: Jay will meet with students on Saturdays, between 10:00 AM - 2:00 PM. Pei will announce office hours.</li>
+</ul>
+<p class="p4"><br></p>
+<p class="p2"><b>Preferred past experience</b></p>
+<p class="p5">Some experience in one or more of the following is preferred in possible team members:</p>
+<ul class="ul1">
+  <li class="li3"><span class="s3"></span>Some Docker or virtualization experience</li>
+  <li class="li3"><b></b>Some Linux experience: Should understand when you need to use root, ps, top, etc.</li>
+  <li class="li3"><b></b>Experience working with JSON or Yaml data.</li>
+  <li class="li3"><b></b>Generally: You should have hacked around on a few nontrivial projects.</li>
+</ul>
+<p class="p6"><b></b><br></p>
+<ul class="ul1">
+  <li class="li3"><b>Problem</b></li>
+</ul>
+<p class="p4"><br></p>
+<p class="p5">How fast can a kubernetes application on on GCE or OpenStack (preferred) handle 1000, 10,000, 100,000 transactions per second through a message queue?</p>
+<ul class="ul1">
+  <li class="li7">benchmark postgreSQL<span class="Apple-converted-space"> </span></li>
+  <li class="li7">redis.</li>
+  <li class="li7">benchmark cassandra</li>
+</ul>
+<p class="p4"><br></p>
+<p class="p5">Right now, K8PetStore is a Golang Web app which sends transactions sent to a REST endpoint directly to Redis.<span class="Apple-converted-space">  </span>We want to anonymize the data sink - i.e. have the app send transactions directly to a message queue.<span class="Apple-converted-space">  </span>Then we want to plug different databases into the message queue on the back end.</p>
+<p class="p2"><b>Some Technologies Expected To Be Learned/Used</b></p>
+<ul class="ul1">
+  <li class="li3">Kafka,<span class="Apple-converted-space"> </span></li>
+  <li class="li3">BigTop,<span class="Apple-converted-space"> </span></li>
+  <li class="li3">PostgreSQL,<span class="Apple-converted-space"> </span></li>
+  <li class="li3">Redis,<span class="Apple-converted-space"> </span></li>
+  <li class="li3">Cassandra</li>
+</ul>
+</body>
+</html>
