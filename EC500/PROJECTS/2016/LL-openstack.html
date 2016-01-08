@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <title>Adding Trusted Platform Module support to OpenStack</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+          <h1 id="project_title">Adding Trusted Platform Module support to OpenStack</h1>
+          <h2 id="project_tagline">Make the cloud a more secure place</h2>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link">
+        </span></a>
+          Project logistics
+        </h3>
+          <ul>
+            <li> Mentor: 
+            <a href="https://www.ll.mit.edu/mission/cybersec/cybersec-bios/schear-bio.html">Nabil 
+            Schear</a> email: schear-at-ll.mit.edu, and others
+            <li> Min-max team size: 4-6
+            <li> Expected project hours per week (per team member): 6-8
+            <li> Will the project be open source? Yes
+        </ul>
+        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link">
+        </span></a>
+          Preferred past experience</h3>
+        <ul>
+          <li> Ability to read and write Python and C (Very Important)
+          <li> Familiarity with Xen (Helpful)
+          <li> An understanding of Openstack development processes (Helpful, but you'll learn too)
+        </ul>
+
+        <h3>
+        <a name="features" class="anchor" href="#features"><span class="octicon octicon-link">
+        </span></a>Project Overview</h3>
+
+        <p>Initializing secrets in cloud computing environments is a difficult problem. Often times
+        developers and operations professionals end up just transmitting an initial secret in a way
+        that it could be intercepted by the provider. Lincoln has worked to understand Xen's
+        Virtual Trusted Platform Module (vTPM) implementation, and written software to interact 
+        with the vTPM to address this problem.</p>
+        <p>This project's goal is to take this research and integrate it into OpenStack. This 
+        entails modifying Nova, OpenStack's compute resource scheduler, to spawn a vTPM instance 
+        on the same host as an actual cloud instance is started on and registering that with the 
+        vTPM manager on the host. We would expect that appropriate unit tests, 
+        <a href="https://wiki.openstack.org/wiki/Blueprints">specs/blueprints</a> and operator 
+        documentation would be put together as well.</p>
+        <p>Indeed, this is a lot of work. But, our hope for this project is that your work would 
+        also be integrated into the actual OpenStack mainline -- exciting! This means you would gain 
+        development expertise within a large open source project, and would be a great way to 
+        demonstrate that you can take research and integrate it
+        into a real system.</p>
+        <p>For more information about TPMs, there's a <a href="https://www.openstack.org/summit/vancouver-2015/summit-videos/presentation/using-tpms-for-the-benefit-of-the-entire-cloud">talk from OpenStack Summit 2015</a> that may
+        be helpful.</p>
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs">
+        <span class="octicon octicon-link"></span></a>
+        You will learn about/use:</h3>
+        <ul>
+          <li>OpenStack
+          <li>Xen
+          <li>Trusted Platform Modules (and the Xen vTPMs)
+          <li>How to contribute to a complex open-source project
+          <li>Cloud Operations
+          <li>Computer Security
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
+
+
