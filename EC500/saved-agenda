@@ -1,0 +1,241 @@
+<<<<<<< HEAD
+
+<ul>
+  <li> Before first week (Jan 15 to Jan 20):
+    <ul>
+      <li> Read <a href="https://piazza.com/class/i1v8n1iypqys1?cid=6">Paper Reviewing Guidelines</a>
+      <li> Read <a href="#projects">Projects Descriptions of all projects</a>
+      <li> Read <a href="https://piazza.com/class/i1v8n1iypqys1?cid=8">Project Management Guidelines</a>
+      <li> Read the two papers of Week 1, and scan over the Agile reading list for the first week
+      <li> Sign up to <a href="https://piazza.com/bu/spring2015/ec500cs591"> course page on Piazza </a> if you haven't done so. After that, you can access the course page <a href="https://piazza.com/bu/spring2015/ec500cs591/home">here</a>.
+      <li> Check out the tools to be used for the course: <a href="http://scottchacon.com/2011/08/31/github-flow.html">github and git workflow</a>, <a href="https://trello.com/buec500"> trello </a>, <a href="https://piazza.com/bu/spring2015/ec500cs591/home"> Piazza </a>
+   </ul>
+  <li> Week 1 (Jan 20, Jan 22)
+<ul>
+  <li> Projects and Agile
+    <ul>
+      <li> Walk through of a <a href="https://docs.google.com/document/d/1wc6w3y8RTKMaaOOlt5c8ZRUj4FuVgVvCysB0HeSd5Oo/edit?usp=sharing">project description template</a>, <a href="https://docs.google.com/a/bu.edu/document/d/1HFhL_XHm4uz49rMz4NMlZhjJvPVe1wmjsNtKXmV5SAM/edit">example project description</a>
+      <li>Scrum roles, Artifacts and rituals, walk through an example of weekly plan,
+        <ul>
+          <li> Checkout:  <a href="http://www.agilemanifesto.org">The Agile Manifesto </a>, <a href="http://www.martinfowler.com/articles/newMethodology.html#AgileManifesto">Context for the Agile Manifesto</a>, <a href="https://www.scrumalliance.org/why-scrum/core-scrum-values-roles">Core Scrum</a>
+        </ul>
+      <li> <a href="http://www.mountaingoatsoftware.com/agile/scrum/task-boards">Task Boards</a>, <a href="http://guide.agilealliance.org/guide/user-stories.html">User Stories</a>, <a href="http://help.trello.com/customer/portal/articles/891656-getting-started-with-trello">Backlog Creation Using Trello</a>, <a href="http://scottchacon.com/2011/08/31/github-flow.html">Working with Git</a>
+      <!-- <li> Sign up for three projects using the <a href="http://doodle.com/if2i4cw2pput2574"> project poll </a> (you will select up to 3, we will assign you to only one project) -->
+    </ul>
+  <li> Paper reading: What is cloud computing <ul>
+<li> <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00516ED2V01Y201306CAC024">The Datacenter as a Computer: An Introduction to the Design of Warehouse-Scale Machines (Only Chapters 1 through 3)</a>
+<li> <a href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf">Above the Clouds: A Berkeley View of Cloud Computing</a>
+<li> <a
+  href="http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf">NIST
+  definition of cloud computing</a>
+    
+
+    
+<!-- <font color="red"> This has moved to week 2</font> -->
+</ul>
+<li> End of Week 1 (eow1) you will have finalized project groups, training on project management (trello, git, agile), ...
+</ul>
+
+<!-- Week 2 -->
+
+    <li> Week 2 (Jan 27, Jan 29)
+    <ul>
+      <li> Projects and Agile
+        <ul>
+          <li> Story creation using roles, Definition of ready, Sizing stories/Levels of effort, Hours vs Velocity, The Whole Team Approach, Risk management
+          <li> Populating Backlogs, <a href="http://www.romanpichler.com/blog/the-product-backlog-grooming-steps/">Backlog Grooming, <a href="http://agilefromthegroundup.blogspot.com/2009/12/agile-software-construction-is-like.html">Incremental Development</a>
+          <li> <a href="https://www.scrumalliance.org/community/articles/2013/august/burn-down-chart-–-an-effective-planning-and-tracki">Burndown Charts</a>, <a href="http://www.projectconnections.com/articles/120506-mcdonald.html">Agile Scheduling</a>
+        </ul>
+    <li> Paper reading: <ul>
+      <!-- <font color="red"> This was moved from week 2</font> -->
+    <li> <a href="https://www.youtube.com/v/TgPTjrf1y0A?autoplay=1">
+        Open Stack, short video presentation</a>
+</ul>
+<li> End of Week 2 (eow2) you will have met with mentors, create a backlog, submit a project outline
+</ul>
+
+<!-- Week 3 -->
+
+<li> Week 3 (Feb 3, Feb 5): Virtualization<ul>
+    <li> <a href="http://www.cs.bu.edu/~jappavoo/Resources/Papers/appavoo-systemjournal-2009.pdf">
+  Kittyhawk: Enabling cooperation and competition in a global, shared
+  computational system</a>
+[
+<a href="https://www.youtube.com/watch?v=XBBcplYo2Ow" >video (Jonathan
+  Appavoo presenting the paper)</a>
+]
+
+<li> <a href="http://dl.acm.org/citation.cfm?id=945462">Xen and the Art of Virtualization</a>
+<li> <a href="http://www.cs.bu.edu/fac/best/res/papers/ic14.pdf">Toward an Open
+Cloud Marketplace: Vision and First Steps</a>
+[<a href="https://www.youtube.com/watch?v=yuUb7XWnOcw">Video of
+  talk at OpenStack Summit</a>]
+    <li> End of Week 3 (eow3) you will have
+      submitted project proposal, and created full backlog (note: this will be marked)
+
+  </ul>
+
+<!-- Week 4 -->
+
+    <li> Week 4 (Feb 10, Feb 12): Virtualization<ul>
+    <li> <a href="https://www.youtube.com/watch?v=Q5POuMHxW-0">Containers - Docker: Introduction to Docker video presentation by Solomon Hykes</a>
+
+      <ul>
+        <li>
+          <a href="https://docs.docker.com/mac/started/">Programming tutorial assignment on Docker</a><br>
+            <ul>
+              <li>Follow the <a href="https://docs.docker.com/mac/started/">getting started tutorial</a>. Choose the tutorial for your OS.
+              <li>Write a one paragraph summary of your experience with the tutorial, submit your summary to blackboard. We will grade these summaries.
+            </ul>
+      </ul>
+<li> <a href="https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Ben-Yehuda.pdf">The Turtles Project: Design and Implementation of Nested Virtualization</a>
+[
+    <a href="https://www.youtube.com/watch?v=FbH63kVGTek">video (Muli Ben-Yahuda presenting the paper)</a>
+]
+
+<li><a href="https://www.usenix.org/conference/osdi14/technical-sessions/presentation/belay">IX: A Protected Dataplane Operating System for High Throughput and Low Latency</a>
+
+<!-- Week 5 -->
+  </ul> <li> Week 5 (Feb 19): MapReduce<ul>
+      <li><a href="http://static.googleusercontent.com/media/research.google.com/en/us/archive/gfs-sosp2003.pdf">The Google File System</a>
+<li> <a href="http://dl.acm.org/citation.cfm?id=1327492">MapReduce: simplified data processing on large clusters</a>
+
+
+<!-- Week 6 -->
+
+    </ul>
+
+<li> Week 6 (Feb 24, Feb 26): Beyond MapReduce<ul>
+  <li> <font color="red">Thursday this week half the class will demo their project</font>
+  <li> <a href="http://dl.acm.org/citation.cfm?id=1687609">Hive - A Warehousing Solution Over a Map-Reduce Framework</a>
+  <li> <a href="http://dl.acm.org/citation.cfm?id=1687568">Building a high-level dataflow system on top of Map-Reduce: the Pig experience</a>
+  <li> <a href="http://www.cs.berkeley.edu/~matei/papers/2010/hotcloud_spark.pdf">Spark: Cluster Computing with Working Sets</a>
+
+
+
+    <ul>
+      <li>
+        <a href="http://hortonworks.com/blog/hands-on-tour-of-apache-spark/">Programming tutorial assignment on Spark</a><br>
+          <ul>
+            <li>Follow the <a href="http://hortonworks.com/blog/hands-on-tour-of-apache-spark/">hands on with Spark tutorial</a>.
+            <li>Write a one paragraph summary of your experience with the tutorial, submit your summary to blackboard. We will grade these summaries.
+          </ul>
+    </ul>
+
+
+
+
+  </ul> <li> Week 7 (Mar 03, Mar 05): The story changes; new networking<ul>
+  <li> <font color="red">Thursday this week the other half the class will demo their project</font>
+  <li> <a href="http://dl.acm.org/citation.cfm?id=1592576">VL2: A Scalable and Flexible Data Center Network</a>
+  <li> <a href="https://www.youtube.com/watch?v=WabdXYzCAOU">Software Defined Networks, video presentation by Scott Shenker</a>
+
+
+  </ul> <li> Spring break
+
+    <ul>
+      <li> Programming tutorial assignment on Hadoop, Pig, and Hive:
+        Follow the instructions:
+          <ul>
+            <li>Install Virtualbox (https://www.virtualbox.org) if you haven’t done so already
+            <li>Download and install the Hortonworks Sandbox image for Virtualbox from http://hortonworks.com/products/hortonworks-sandbox/#install
+            <li>Go through the following tutorials:
+              <ul>
+              <li>Hadoop: http://hortonworks.com/hadoop-tutorial/introducing-apache-hadoop-developers/
+
+              <li>Simple Hive and Pig: http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/
+
+              <li>Hive: http://hortonworks.com/hadoop-tutorial/how-to-process-data-with-apache-hive/
+
+              <li>Pig: http://hortonworks.com/hadoop-tutorial/how-to-process-data-with-apache-pig/
+              </ul>
+            <li>Write a one paragraph summary of your experience with each tutorial, submit your 4 paragraph summary to blackboard. We will grade these summaries.
+          </ul>
+    </ul>
+
+
+  <li> Week 8 (Mar 17, Mar 19): <ul>
+<li> <a href="http://css.csail.mit.edu/6.824/2014/papers/fds.pdf">Flat Datacenter Storage</a>
+[
+    <a href="https://www.usenix.org/conference/osdi12/technical-sessions/presentation/nightingale"> video (Jeremy Elson presenting the paper)</a>
+]
+<li> <a href="http://dl.acm.org/citation.cfm?id=1298485">Ceph: a scalable, high-performance distributed file system</a>
+[
+     <a href="https://www.youtube.com/watch?v=lG6eeUNw9iI"> an introductory video </a>
+]<br>
+[
+     Also check: <a href="http://ceph.com/papers/weil-crush-sc06.pdf">CRUSH</a>, data placement algorithm of CEPH and <a href="http://ceph.com/papers/weil-rados-pdsw07.pdf">RADOS</a>, underlying object store of CEPH.
+]
+
+  </ul> <li> Week 9  (Mar 24, Mar 26): <ul>
+<li> <a href="http://dl.acm.org/citation.cfm?id=1365816">Bigtable: A Distributed Storage System for Structured Data</a>
+<li> <a href="https://d1b10bmlvqabco.cloudfront.net/attach/gxwy8ortdvi32u/gzb5bk446s35mk/gzb5cbzgu705oj/CAP-Eric.pdf"> CAP Twelve Years Later: How the “Rules” Have Changed </a>
+
+
+  </ul> <li> Week 10 (Mar 31, Apr 02): <ul>
+<li> <a href="http://dl.acm.org/citation.cfm?id=1294281">Dynamo: amazon's highly available key-value store</a>
+<li> <a href="http://dl.acm.org/citation.cfm?id=1773922">Cassandra: a decentralized structured storage system</a>
+	<ul>    <li><a href="https://academy.datastax.com/demos/brief-introduction-apache-cassandra">Introductory blog</a>
+<li><a href="https://academy.datastax.com/courses/ds101-introduction-cassandra">Introduction to Cassandra online course on Datastax</a>
+
+    <ul>
+      <li>
+        <a href="http://www.planetcassandra.org/install-cassandra-ova-on-virtualbox/">Programming tutorial assignment on Cassandra</a><br>
+          <ul>
+            <li>Install Virtualbox (https://www.virtualbox.org) if you haven’t done so already
+            <li>Download the Cassandra OVA image for Virtualbox from http://goo.gl/D1iow8
+            <li>Go through the installation tutorial:
+              <ul>
+              <li>http://www.planetcassandra.org/install-cassandra-ova-on-virtualbox/
+              <li>Go through the Developer Walkthrough: http://www.planetcassandra.org/create-a-keyspace-and-table
+              </ul>
+            <li>Write a one paragraph summary of your experience, submit your 1 paragraph summary to blackboard. We will grade these summaries.
+          </ul>
+    </ul>
+
+
+
+		<!--li><a href="http://www.datastax.com/documentation/articles/cassandra/cassandrathenandnow.html">List of changes made to architecture in paper for Cassandra 2.0</a>
+		<li><a href="http://www.datastax.com/dev/blog/virtual-nodes-in-cassandra-1-2">Blog post on the introduction of Virtual Nodes</a-->
+	</ul>
+  </ul> <li> Week 11 (Apr 07, Apr 09): <ul>
+<li><a href="https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf">ZooKeeper: Wait-free coordination for Internet-scale systems</a>
+[
+     <a href="https://www.usenix.org/conference/usenix-atc-10/zookeeper-wait-free-coordination-internet-scale-systems"> video (Benjamin Reed presenting the paper) </a>
+]
+<li> <a href="http://mesos.berkeley.edu/mesos_tech_report.pdf">Mesos:
+A Platform for Fine-Grained Resource Sharing in the Data Center</a>
+[
+ <a href="https://www.usenix.org/conference/nsdi11/mesos-platform-fine-grained-resource-sharing-data-center">video (Matei Zaharia presenting the paper)</a>
+]
+
+<li> <a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43438.pdf">Large-scale cluster management at Google with Borg</a>
+
+  </ul> <li> Week 12 (Apr 14, Apr 16): <ul>
+<li> <a href="http://dl.acm.org/citation.cfm?id=2628251">Survey of Real-time Processing Systems for Big Data</a>
+<li> <a href="http://dl.acm.org/citation.cfm?id=2595641">Storm@twitter</a>
+  [
+   <a href="https://youtu.be/bdps8tE0gYo">video (Nathan Marz presenting Storm)</a>
+  ]
+<li> <a href="http://sigops.org/sosp/sosp13/papers/p423-zaharia.pdf">Spark: Discretized Streams: An Efficient and Fault-Tolerant Model for Stream Processing on Large Clusters</a>
+[
+     <a href="https://www.youtube.com/watch?v=yaoTzbriIJI">video (Tathagata Das presenting the paper)</a>
+]
+
+  </ul> <li> Week 13 (Apr 21, Apr 23): <ul>
+<li> <a href="http://dl.acm.org/citation.cfm?id=1807184">Pregel: a system for large-scale graph processing</a>
+  [
+   <a href="https://youtu.be/yX_zJyNbpac">video (a brief intro to Pregel)</a>
+  ]
+<li> <a href="http://www.ibm.com/developerworks/library/os-giraph/">Processing large-scale graph data: A guide to current technology</a>
+<li> <a href="http://www.select.cs.cmu.edu/publications/paperdir/osdi2012-gonzalez-low-gu-bickson-guestrin.pdf">PowerGraph: Distributed Graph-Parallel Computation on Natural Graphs</a>
+  [
+       <a href="https://www.usenix.org/conference/osdi12/technical-sessions/presentation/gonzalez">video (Joseph E. Gonzales presenting the paper)</a>
+  ]
+  </ul> <li> Week 14 (Apr 28, Apr 30):
+
+    <li> <a href="http://lagarcavilla.org/publications/LagarCavillaEurosys09.pdf">SnowFlock: Rapid Virtual Machine Cloning for Cloud Computing</a>
+
+
+</ul>
+=======
