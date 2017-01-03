@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ataturk.github.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title>Kubernetes Controller</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+
+          <h1 id="project_title">Improving scheduling in Kubernetes</h1>
+          <h2 id="project_tagline">KubernetesScheduling</h2>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+          Project logistics
+        </h3>
+          <ul>
+
+            <li> Mentor: <a href="http://jayunit100.blogspot.com/">Jay Vyas</a> email: jvyas at redhat dot com
+            <li> Min-max team size: 3-5
+            <li> Expected project hours per week (per team member): 6-8
+            <li> Will the project be open source? Yes 
+          </TBD>
+        </ul>
+
+        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
+          Preferred past experience</h3>
+         <ul>
+
+<li> kubernetes (Valuable)
+<li> golang (Valuable)
+          </ul>
+
+        <h3><a name="features" class="anchor" href="#features"><span
+          class="octicon octicon-link"></span></a>
+Project Overview: </h3>
+
+<p>Analyze the kubernetes controller framework that is
+implemented in the scheduler, build tests which can rapidly simulate how it
+interacts with etcd in a large cluster, and use those tests to determine if
+algorithmic improvements (i.e. bloom filters) can be used to speed up
+matching of pods -> nodes in a busy cluster.</p>
+
+<p>Chance to deeply learn about scheduling, golang, kubernetes, etcd, consistency algorithms,the RAFT algorithm, bloom filters, and database n-ary indices.
+High profile pull requests into at least 3 projects will be possible: etcd,
+kubernetes, and  willf's bloom filter.</p>
+
+<p>0) Build scheduling stress tests inside of kubernetes unit testing library
+which measure the time to schedule 1000s of pods when node matching needs
+to occur using complex inequality/predicate logic (i.e. memory, cpu
+constraints, etc.).  This is mostly kubernetes coding activity.</p>
+
+<p>1) Research: a bloom filter with inequalities  , i.e.
+https://www.eecs.harvard.edu/~michaelm/postscripts/alenex2006.pdf.  Can it
+be used in the real world, when and when not?   Implement it as an
+extension to https://github.com/willf/bloom .  This is pure algorithmic
+research.</p>
+
+<p>2) Analyze how the controller interacts with etcd, diagram it, and
+determine what happens when inequalities (less than, greater than) are
+queried.  Look at the Matches interface and how it is triggered from the
+current scheduler.  This is mostly pure golang+kube research: Diagramming
+and looking at the code path.</p>
+
+<p>3) Analyze ETCD (this is the backbone of kubernetes: the golang equivalent
+of zookeeper: a k/v database that is strictly consistent) and determine how
+one can efficiently query inequalities in etcd.  How range queries
+currently supported in ETCD, if so, how are they implemented, and could
+they be sped up ?
+https://pdfs.semanticscholar.org/9e39/0f82217acede629306eb0b45e040152b2775.=
+pdf.
+Also, in general, how are range queries implemented in other K/V databases
+(SOLR, Cassandra,...).</p>
+
+<p>4) Find where the kubernetes API uses ETCD, intercept all calls: What parts
+of etcd's API is it using/not-using.  This can be done using anything from
+Wireshark just look at HTTP calls being made - to just reading
+through-analyzing of the code.  Make a meaningfull histogram of etcd calls
+being made in a real world application (i.e. running density tests, or
+running other e2e tests).</p>
+
+<p>Overall goal: Determine wether or not (1) can be used to optimize the
+performance of queries inside of (2).   Measure the difference using the
+results of (0).  (3 and 4 play into this because they will allow us to know
+if we're on the right path for 1 and 2, or wether we should change
+direction).</p>
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+Some Technologies you will learn/use:
+        </h3>
+
+            <ul>
+              <li> kubernetes
+              <li> golang
+              <li> ETCD
+            </ul>
+
+      </section>
+    </div>
+
+  </body>
+</html>
