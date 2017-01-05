@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Ataturk.github.io : ">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.green-red.min.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <title>Automated Pull Requests</title>
+
+  <style>
+      header {
+        color: rgba(0,0,0,.54);
+          padding: 24px;
+      }
+
+      header h1 {
+          /*text-transform: uppercase;*/
+      }
+
+      .card-wide {
+          width: 100%;
+          /*margin-bottom: 2em;
+          margin-left: auto;
+          margin-right: auto;*/
+      }
+      .card-container {
+          width: 75%;
+          margin-bottom: 2em;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      @media (max-width: 600px) {
+          .card-container {
+              width: calc(100% - 19px);
+              margin-left: 10px;
+          }
+        }
+      .card-wide .mdl-card__supporting-text {
+          color: #000;
+      }
+
+      .card-wide h4, .card-wide h3 {
+          margin: 0;
+      }
+      .card-wide .mdl-card__title {
+          background: rgb(76,175,80);
+          color: #fff;
+      }
+
+      .card-wide h3 {
+          font-size: 24px;
+          line-height: 32px;
+      }
+
+      body {
+          background: #fafafa;
+      }
+      section#main-content {
+          text-align: center;
+      }
+
+      img {
+          border-radius: 5px;
+          height: 150px;
+      }
+      .no-decoration {
+          text-decoration: none;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div id="header_wrap" class="outer">
+    <header class="inner">
+      <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+      <h1 id="project_title">Automated Pull Requests</h1>
+      <h3 id="project_tagline">Approving/Rejecting pull requests with automated builds</h3>
+    </header>
+  </div>
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+      <div class="card-container">
+          <div class="mdl-card mdl-shadow--2dp card-wide">
+              <div class="mdl-card__title">
+                  <h3>
+                      <a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+                      Project logistics
+                  </h3>
+              </div>
+              <ul>
+                  <li>
+                  Mentors:
+                  <ul>
+                      <li><strong>Sam Howes</strong> Email: showes06@gmail.com</li>
+                  </ul>
+                  <li>Min-max team size: 3-5</li>
+                  <li>Expected project hours per week (per team member): 6-8</li>
+                  <li>Open source</li>
+              </ul>
+          </div>
+      </div>
+          <div class="card-container">
+              <div class="mdl-card mdl-shadow--2dp card-wide">
+                  <div class="mdl-card__title">
+                      <h4>
+                          <a name="preferred" class="anchor" href="#preferred">
+                              <span class="octicon octicon-link"></span>
+                          </a>
+                          Preferred past experience
+                      </h4>
+                  </div>
+                  <ul>
+                      <li>Java</li>
+                      <li>Git (Nice to have)</li>
+                      <li>Automated Testing (Nice to have)</li>
+                      <li>Build Automation (Nice to have)</li>
+                  </ul>
+
+              </div>
+          </div>
+          <div class="card-container">
+              <div class="mdl-card mdl-shadow--2dp card-wide">
+                  <div class="mdl-card__title">
+                      <h3>
+                          <a name="features" class="anchor" href="#features">
+                              <span class="octicon octicon-link"></span>
+                          </a>
+                          Project Overview
+                      </h3>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                      <div>
+                          <h4>Goal</h4>
+                        <p>
+                            The goal of this project is to eliminate the human step required in ensuring pull requests contain quality code, and have a Build Server do building and testing of pull requests. The build server (TeamCity) will then interact with the repository host and approve or reject the pull request based on the build results. This will prevent broken code from being pushed into the main branch, and ruining the team's productivity. 
+                        </p>
+                      </div>
+                      <div>
+                        <h4>Background</h4>
+                        <p>
+                            Pull requests are an important piece of the development process. When a developer has finished work on a particular feature, they create a pull request to merge that feature into the main source control branch. This pull request is then reviewed by the developer's teammatea who provide feedback on the code. When they approve the Pull Request, it is merged into the main branch of the codebase, and available for the rest of the team to code against. 
+                        </p>
+                        <p>
+                            In a perfect world, before submitting the pull request, the devloper builds the entire project, and makes sure all of the automated tests pass successfully. In a perfect world, the devloper that is reviewing the pull request pulls down the source branch to their local repository, builds the code and runs all the tests as well. In practice, both of these steps rarely followed for all the code in the codebase. 
+                        </p>
+                        <p> 
+                            For example, when you are developing a web application, a database must be built and deployed, then the web-application has to be launched and smoke tested - because some errors only happen at run-time, not compile-time. This process can take up to 15 minutes. To save time, developers will skip this build and testing step and complete the pull request. If someone missed something, the build could break, and everyone's work is interrupted because they can't develop against broken code. In many teams, this will earn you a token of appreciation for <a href="https://www.google.com/search?q=broke+the+build+meme&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi-5J6LxqnRAhVi34MKHcChDQMQ_AUICCgB&biw=1440&bih=799&dpr=2">interrupting everyone's work</a>:
+                        </p>
+                        <div class="center no-decoration">
+                            <a target="_blank" href="https://www.google.com/search?q=broke+the+build+meme&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi-5J6LxqnRAhVi34MKHcChDQMQ_AUICCgB&biw=1440&bih=799&dpr=2">
+                                <img class="mdl-shadow--2dp" src="http://m.memegen.com/0ithmp.jpg" />
+                            </a>
+                            <a target="_blank" href="https://www.google.com/search?q=broke+the+build+meme&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi-5J6LxqnRAhVi34MKHcChDQMQ_AUICCgB&biw=1440&bih=799&dpr=2#tbm=isch&q=broke+the+build+hat"> 
+                                <img class="mdl-shadow--2dp" src="http://www.mindfulhacker.com/wp-content/uploads/2011/09/moron.jpg" />
+                            </a>
+                            <a target="_blank" href="https://www.google.com/search?q=broke+the+build+meme&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi-5J6LxqnRAhVi34MKHcChDQMQ_AUICCgB&biw=1440&bih=799&dpr=2">
+                            <img class="mdl-shadow--2dp" src="http://i1.wp.com/www.developermemes.com/wp-content/uploads/2015/07/I-Dont-Know-Who-You-Are-But-If-You-Broke-The-Build-I-Will-Find-You-And-I-Will-Kill-You-Meme.jpg" />
+                            </a>
+                        </div>
+                     </div>
+                  </div>
+              </div>
+          </div>
+              <div class="card-container">
+                  <div class="mdl-card mdl-shadow--2dp card-wide">
+                      <div class="mdl-card__title">
+                          <h3>
+                              <a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+                              Some Technologies you will learn/use:
+                          </h3>
+                      </div>
+                      <ul>
+                          <li><a href="https://www.jetbrains.com/teamcity/" target="_blank">TeamCity</a> build server </li>
+                          <li>Java to write a <a href="https://confluence.jetbrains.com/display/TCD9/Developing+TeamCity+Plugins" target="_blank">TeamCity Plugin</a>
+                          </li>
+                          <li>
+                              <a href="https://www.visualstudio.com/products/visual-studio-team-services-vs" target="_blank">Visual Studio Team Services</a> repository hosting and work item tracking.
+                              <ul>
+                                  <li>
+                                      <a href="https://www.visualstudio.com/en-us/docs/integrate/api/overview" target="_blank">Rest api docs</a>
+                                  <li>*Note: Visual Studio Online has been re-branded as Visual Studio Team Services recently. It is a work item tracking system similar to JIRA, it is not to be confused with the Visual Studio IDE used for writing code.</li>
+                              </ul>
+                          </li>
+                          <li>
+                             Additional hosting providers: <a target="_blank" href="https://developer.github.com/v3/pulls/">GitHub</a>, <a target="_blank" href="https://developer.atlassian.com/bitbucket/api/2/reference/">BitBucket</a>, others?
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+</section>
+  </div>
+</body>
+
+</html>
