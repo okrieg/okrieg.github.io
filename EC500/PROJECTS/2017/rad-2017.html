@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+  <head>
+
+    <meta charset='utf-8'>
+
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <meta name="description" content="Ataturk.github.io : ">
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+
+
+    <title>Radiology in the cloud</title>
+
+    <style>
+        body {font-family: sans-serif;}
+    </style>
+
+  </head>
+
+
+
+  <body>
+
+
+
+    <!-- HEADER -->
+
+    <div id="header_wrap" class="outer">
+
+        <header class="inner">
+
+          <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
+
+
+
+          <h1 id="project_title">Radiology in the Cloud</h1>
+
+          <h2 id="project_tagline">A practical web-based biomedical platform for data and job handling in the cloud</h2>
+
+        </header>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="main_content_wrap" class="outer">
+
+      <section id="main_content" class="inner">
+
+        <h3><a name="mentor" class="anchor" href="#mentor"><span class="octicon octicon-link"></span></a>
+
+          Project logistics
+
+        </h3>
+
+        <ul>
+            <li>
+                    Mentor: <a href="http://www.childrenshospital.org/researchers/rudolph-pienaar">Rudolph Pienaar</a> email: rudolph.pienaar-at-childrens.harvard.edu
+            </li>
+            <li>
+                    Min-max team size: 4-7
+            </li>
+            <li>
+                    Expected project hours per week (per team member): 6-8
+            </li>
+            <li>
+                    Will the project be open source? Yes
+            </li>
+          </ul>
+
+
+
+        <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
+
+          Preferred past experience</h3>
+
+         <ul>
+                 <li>
+                         Job handling / concepts of distributed computing (Very important)
+                 </li>
+                 <li>
+                         Linux job basics (ssh to remote hosts, running/handling jobs) (Rather important)
+                 </li>
+                 <li>
+                         Python (Valuable)
+                 </li>
+                 <li>
+                         Docker / HPC scheduling  (Nice to have, but will learn)
+                 </li>
+          </ul>
+
+
+
+        <h3><a name="features" class="anchor" href="#features"><span
+
+          class="octicon octicon-link"></span></a>
+
+Project Overview
+
+	  </h3>
+
+<p>
+ <i>Cloud-based</i> medical image processing is an emerging component of the larger distributed processing field and offers many opportunties to explore new software approaches to collecting, disseminating, processing, and sharing both compute and data.
+ </p>
+
+<p>
+This project seeks to architect practical solutions to medical data processing. Our group at Boston Children's Hospital has developed a web-based workflow manager called <a href="https://github.com/FNNDSC/chrisreloaded"><b>ChRIS</b></a> that allows for the collection, processing, and real-time collaboration on image data.
+</p>
+
+<p>
+In Spring of 2015, a BU team designed and built a python-based scheduler for ChRIS on Massachussetts Open Cloud (MOC). In 2016, a second team demoed the encapsulation of a processing pipeline within a docker container. THis pipeline was integrated into the web-based front end.
+</p>
+
+<p>
+This year, we seek to integrate several components into a web-based distributed system. The team will deploy ChRIS on a publically accessible web-server. For this project, the team will have login/ssh access to this server. On this server the team will also instantiate a containerized PACS (Picture Archive and Communications System) image server (called Orthanc) and populate it with anonymized MRI data provided by the mentor. The team will adapt/tweak the existing image search plugin within ChRIS to query the dockerized server (currently the search plugin queries the commerical PACS server at BCH). 
+
+Once the existing system has been adapted/tweaked to pull images from the dockerized server, the team will implement a solution to transferring data from the web server filesystem out to a remote compute platform. As with the search, the BCH team already has developed modules to do this, but some tweaking is necessary to deploy in a new system.
+
+Finally, the team will execute a dockerized analysis pipeline on the remote compute platform, return the results to the web server, and the ChRIS system will then present to the user.
+</p>
+
+<p>
+In summary:
+<ul>
+<li>
+Instantiate a docker instance of a PACS server (Orthanc) on a publically accessible machine (provide by the mentor)
+</li>
+<li>
+Deploy the existing ChRIS system on this machine in its own docker container.
+</li>
+<li>
+Connect/tweak/adapt the existing ChRIS PACS search plugin to query/retrieve from the Orthanc dock.
+</li>
+<li>
+Adpat existing python modules to transfer data (via REST-http) from the server to a remote HPC.
+</li>
+<li>
+Execute a dockerized pipeline on the remote HPC.
+</li>
+<li>
+Adapt existing python modules to pull processed data back to ChRIS.
+</li>
+</ul>
+
+        <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
+
+                Some Technologies you will learn/use:
+
+        </h3>
+            <ul>
+                <li>
+                        Linux process management and distributed system design
+                </li>
+                <li>
+                        Docker usage and architecturing in a real-world practical system
+                </li>
+                <li>
+                        HPC, particularly as pertains to self-contained compute.
+                </li>
+            </ul>
+      </section>
+    </div>
+
+
+
+  </body>
+</html>
+
+
+
