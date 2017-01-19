@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
 
-    <title>Integrating QUADS and HIL</title>
+    <title>Automated Resource Allocation from HIL using QUADS</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <!--a id="forkme_banner" href="https://github.com/ataturk">View on GitHub</a-->
 
-          <h1 id="project_title">Automated resource allocation from HIL using QUADS</h1>
-          <!--h2 id="project_tagline"> xxxxxxxx </h2-->
+          <h1 id="project_title">Automated Resource Allocation from HIL using QUADS</h1>
+          <!--h2 id="project_tagline"> Integrating HIL and QUADS </h2-->
         </header>
     </div>
     <!-- MAIN CONTENT -->
@@ -29,20 +29,18 @@
           Project logistics
         </h3>
           <ul>
-
             <li> Mentors (HIL): <a href="http://cs-people.bu.edu/tikale/">Sahil Tikale</a> email: tikale@bu.edu; <a href=" xxx" >Naved Ansari</a> email: naved001@gmail.com
 	    <li> Mentors (QUADS): <a href="xxxxx">Kambiz Aghaiepour</a> email: kambiz@redhat.com
             <li> Min-max team size: 4-7
             <li> Expected project hours per week (per team member): 6-8
             <li> Will the project be open source? Yes.
-          </TBD>
-        </ul>
+          </ul>
 
         <h3><a name="preferred" class="anchor" href="#preferred"><span class="octicon octicon-link"></span></a>
           Preferred past experience</h3>
          <ul>
 
-<li> Some development experience preferably using python (Very important)
+<li> Some development experience, preferably using python (Very important)
 <li> Experience with frameworks like FLASK, SQLAlchemy etc (Valuable)
 <li> Submitting patches to opensource projects (Nice to have)
 <!--li> xxx To add more change here xxx-->
@@ -53,17 +51,37 @@
 Project Overview:
 
 	  </h3>
-<p>QUADS stands for quick and dirty scheduler, an opensource project developed at red hat that helps in machine allocation based on various policies. It uses date/time based YAML schedule for machine allocations and has support for automated visualization of current and future allocations. HIL stands for Hardware Isolation Layer, is a minimalistic layer that decouples node allocation from node provisioning. It allows mutually untrusting physically deployed services to share the data center while resources can move back and forth between them. </p>
+<p>QUADS stands for quick and dirty scheduler, an opensource project developed
+at Red Hat that tracks system and network resource allocations, schedules those
+resources, and provisions those resources as requested, all to meet v various
+policies. It uses date/time based YAML schedule for resource allocations and has
+support for automated visualization of current and future allocations.</p>
 
-<p> QUADS is independent of the underlying provisioning system and HIL does not put restrictions on how the nodes are scheduled. In this project, you will integrate QUADS to schedule resources allocated using HIL.
-You will learn in depth about scheduling, provisioning, and complexity of integrating existing systems to create a new solution with a chance to get your pull requests integrated into QUADS and HIL. You will analyze and make modifications to the code-base of both of these projects. If needed you will develop new api calls. This will include a full cycle of development experience from proposing the design, implementation and unit testing to documentations for users and developers. </p>
+<p>HIL, which stands for Hardware Isolation Layer, is a minimalistic layer that
+decouples node allocation from node provisioning. It allows mutually untrusting
+physically deployed services to share the data center while resources can move
+back and forth between them.</p>
+
+<p>QUADS is independent of the underlying provisioning system and HIL does not
+put restrictions on how the nodes are scheduled. In this project, you will
+integrate the two sub-systems where QUADS will schedule resources allocated
+using HIL.</p>
+
+<p>You will learn in depth about scheduling, provisioning, and complexity of
+integrating existing systems to create a new solution with a chance to get
+your pull requests integrated into QUADS and HIL. You will analyze and make
+modifications to the code-base of both of these projects. If needed, you will
+develop new API calls and UIs. This will include a full cycle of development
+experience from proposing the design, implementation and unit testing, to
+writing documentation for users and developers. </p>
+
         <h3><a name="expected-techs" class="anchor" href="#expected-techs"><span class="octicon octicon-link"></span></a>
 Some Technologies you will learn/use:
         </h3>
 
             <ul>
 <li> Python 2.6+, libyaml, SQLAlchemy, FLASK
-<li> GITHUB for HIL and GERRIT for QUADS
+<li> GITHUB for HIL and GERRIT for QUADS (see https://github.com/redhat-performance/quads#contributing)
 <li> HIL: http://hil.readthedocs.io/en/latest/ and https://github.com/CCI-MOC/hil
 <li> QUADS: https://github.com/redhat-performance/quads
 <!--li> xxx To add more change here xxx-->
