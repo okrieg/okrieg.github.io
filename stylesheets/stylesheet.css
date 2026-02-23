@@ -1,9 +1,43 @@
 /*******************************************************************************
 Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
+Modernized for responsive design - Phase 1
 *******************************************************************************/
 
 @import url(pygment_trac.css);
+
+/*******************************************************************************
+CSS Custom Properties (Variables)
+*******************************************************************************/
+
+:root {
+  /* Colors */
+  --color-primary: #007edf;
+  --color-text: #373737;
+  --color-heading: #222222;
+  --color-bg-light: #f2f2f2;
+  --color-bg-dark: #212121;
+  --color-bg-gradient-start: #373737;
+  --color-bg-gradient-end: #212121;
+  --color-border: #ebebeb;
+  --color-white: #fff;
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+  --spacing-xl: 50px;
+
+  /* Typography */
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  --font-mono: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+
+  /* Sizes */
+  --content-max-width: 1200px;
+  --touch-target-min: 44px;
+}
 
 /*******************************************************************************
 MeyerWeb Reset
@@ -50,19 +84,19 @@ Theme Styles
 
 body {
   box-sizing: border-box;
-  color:#373737;
-  background: #212121;
+  color: var(--color-text);
+  background: var(--color-bg-dark);
   font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
+  margin: var(--spacing-sm) 0;
   font-weight: 700;
-  color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  color: var(--color-heading);
+  font-family: var(--font-heading);
   letter-spacing: -1px;
 }
 
@@ -103,22 +137,24 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #007edf;
+  color: var(--color-primary);
   text-shadow: none;
-
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -moz-transition: text-shadow 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -o-transition: text-shadow 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -ms-transition: text-shadow 0.5s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  /* Improve touch targets on mobile */
+  padding: 2px 0;
 }
 
-a:hover, a:focus {text-decoration: underline;}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* Ensure adequate touch targets for navigation links on mobile */
+@media screen and (max-width: 767px) {
+  li a {
+    display: block;
+    padding: 8px 0;
+  }
+}
 
 footer a {
   color: #F2F2F2;
@@ -136,16 +172,12 @@ strong {
 img {
   position: relative;
   margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
+  max-width: 100%;
+  height: auto;
+  padding: var(--spacing-xs);
+  margin: var(--spacing-sm) 0;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 0 5px var(--color-border);
 }
 
 p img {
@@ -155,6 +187,26 @@ p img {
   vertical-align: middle;
   text-align: center;
   border: none;
+}
+
+/* Responsive image utilities */
+.alignright {
+  float: right;
+  margin: 0 0 var(--spacing-sm) var(--spacing-md);
+}
+
+.alignleft {
+  float: left;
+  margin: 0 var(--spacing-md) var(--spacing-sm) 0;
+}
+
+@media screen and (max-width: 768px) {
+  .alignright,
+  .alignleft {
+    float: none;
+    display: block;
+    margin: var(--spacing-md) auto;
+  }
 }
 
 pre, code {
@@ -202,12 +254,18 @@ ul, ol, dl {
 
 ul {
   list-style: inside;
-  padding-left: 20px;
+  padding-left: var(--spacing-md);
 }
 
 ol {
   list-style: decimal inside;
-  padding-left: 20px;
+  padding-left: var(--spacing-md);
+}
+
+/* Improve spacing for better touch targets on mobile */
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
 dl dt {
@@ -264,8 +322,8 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
-  padding: 20px 10px;
+  max-width: var(--content-max-width);
+  padding: var(--spacing-md) var(--spacing-sm);
   margin: 0 auto;
 }
 
@@ -369,12 +427,114 @@ Full-Width Styles
 
 
 /*******************************************************************************
-Small Device Styles
+Two-Column Layout
 *******************************************************************************/
 
-@media screen and (max-width: 480px) {
+.two-column-layout {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.main-column {
+  flex: 1 1 500px;
+  min-width: 0;
+}
+
+.publications-column {
+  flex: 0 1 350px;
+  min-width: 280px;
+}
+
+/* Project styling */
+.project {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.project:last-of-type {
+  border-bottom: none;
+}
+
+.project h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.project p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.publications-note {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+  font-size: 14px;
+}
+
+/* Email highlight */
+.email-highlight {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-left: 4px solid var(--color-primary);
+  margin: 15px 0;
+}
+
+/* Students layout */
+.students-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.students-current {
+  flex: 1 1 250px;
+}
+
+.students-former {
+  flex: 1 1 250px;
+}
+
+/* Single-spaced student lists */
+.students-list li {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.students-list {
+  margin-bottom: 10px;
+}
+
+/* Stack students on smaller screens */
+@media screen and (max-width: 700px) {
+  .students-layout {
+    flex-direction: column;
+  }
+}
+
+/* On smaller screens, stack the columns */
+@media screen and (max-width: 900px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .publications-column {
+    flex: 1 1 auto;
+  }
+}
+
+/*******************************************************************************
+Responsive Design - Mobile First Approach
+*******************************************************************************/
+
+/* Mobile devices (default styles above, enhancements below) */
+@media screen and (max-width: 767px) {
   body {
-    font-size:14px;
+    font-size: 14px;
   }
 
   #downloads {
@@ -382,12 +542,11 @@ Small Device Styles
   }
 
   .inner {
-    min-width: 320px;
-    max-width: 480px;
+    padding: var(--spacing-md) 15px;
   }
 
   #project_title {
-  font-size: 32px;
+    font-size: 32px;
   }
 
   h1 {
@@ -415,9 +574,45 @@ Small Device Styles
   }
 
   code, pre {
-    min-width: 320px;
-    max-width: 480px;
-    font-size: 11px;
+    font-size: 12px;
+    overflow-x: auto;
   }
 
+  /* Improve GitHub banner on mobile */
+  #forkme_banner {
+    font-size: 14px;
+    padding: 8px 40px 8px 8px;
+  }
+
+  /* Better spacing for mobile */
+  #header_wrap .inner {
+    padding: var(--spacing-lg) 15px var(--spacing-md) 15px;
+  }
+
+  #main_content {
+    padding-top: var(--spacing-md);
+  }
+}
+
+/* Tablet devices */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .inner {
+    max-width: 720px;
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 1024px) {
+  .inner {
+    max-width: var(--content-max-width);
+  }
+
+  body {
+    font-size: 16px;
+  }
 }
